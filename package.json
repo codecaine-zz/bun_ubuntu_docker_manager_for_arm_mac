@@ -1,0 +1,44 @@
+{
+  "name": "bun_auto_linux_bsd_docker_for_mac_arm",
+  "version": "1.0.0",
+  "description": "Ubuntu Docker Manager for macOS ARM - Easy container management with Bun",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "setup": "bun run index.ts setup",
+    "start": "bun run index.ts start",
+    "stop": "bun run index.ts stop",
+    "delete": "bun run index.ts delete",
+    "status": "bun run index.ts status",
+    "attach": "bun run scripts/attach-ubuntu.ts",
+    "logs": "bun run index.ts logs",
+    "exec": "bun run index.ts exec",
+    "restart": "bun run index.ts restart",
+    "inspect": "bun run index.ts inspect",
+    "update": "bun run index.ts update",
+    "backup": "bun run index.ts backup",
+    "cleanup": "bun run index.ts cleanup",
+    "config": "bun run index.ts config",
+    "list": "bun run index.ts list"
+  },
+  "keywords": [
+    "ubuntu",
+    "docker",
+    "macos",
+    "arm",
+    "container",
+    "development",
+    "bun",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
