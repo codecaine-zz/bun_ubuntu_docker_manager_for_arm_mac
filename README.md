@@ -9,7 +9,8 @@
 ## 📋 Table of Contents
 
 - [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
+- [� Prerequisites Installation](#-prerequisites-installation)
+- [�🚀 Quick Start](#-quick-start)
 - [📖 Commands Reference](#-commands-reference)
 - [⚙️ Configuration](#️-configuration)
 - [💾 Data Persistence](#-data-persistence)
@@ -50,9 +51,93 @@
 
 ---
 
-## 🚀 Quick Start
+## � Prerequisites Installation
 
-### Prerequisites
+### Installing on ARM Mac (Apple Silicon)
+
+#### 1. Install Homebrew (if not already installed)
+
+```bash
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Add Homebrew to your PATH (for Apple Silicon Macs)
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
+source ~/.zshrc
+
+# Verify installation
+brew --version
+```
+
+#### 2. Install Docker Desktop
+
+##### Option A: Using Homebrew (Recommended)
+
+```bash
+# Install Docker Desktop via Homebrew
+brew install --cask docker
+
+# Start Docker Desktop application
+open /Applications/Docker.app
+```
+
+##### Option B: Manual Installation
+
+1. Download Docker Desktop for Mac (Apple Chip) from [docker.com](https://www.docker.com/products/docker-desktop/)
+2. Install the `.dmg` file
+3. Launch Docker Desktop from Applications
+
+##### Verify Docker Installation
+
+```bash
+# Wait for Docker to start, then verify
+docker --version    # Should show Docker version 20.0+
+docker run hello-world  # Test Docker functionality
+```
+
+#### 3. Install Bun
+
+##### Option A: Using Homebrew
+
+```bash
+# Install Bun via Homebrew
+brew install bun
+
+# Verify installation
+bun --version      # Should show Bun 1.0+
+```
+
+##### Option B: Using Curl
+
+```bash
+# Install Bun directly
+curl -fsSL https://bun.sh/install | bash
+
+# Add to PATH (if needed)
+echo 'export PATH="$HOME/.bun/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+# Verify installation
+bun --version
+```
+
+#### 4. Verify All Prerequisites
+
+```bash
+# Verify all tools are installed correctly
+echo "=== System Check ==="
+uname -m              # Should show 'arm64' for Apple Silicon
+brew --version        # Homebrew version
+docker --version      # Docker version 20.0+
+bun --version         # Bun 1.0+
+echo "=== All set! 🎉 ==="
+```
+
+---
+
+## �🚀 Quick Start
+
+### Final Prerequisites Check
 
 ```bash
 # Required
@@ -60,7 +145,7 @@
 ✅ Docker Desktop installed and running
 ✅ Bun runtime installed
 
-# Verify prerequisites
+# Quick verification
 docker --version    # Docker version 20.0+
 bun --version      # Bun 1.0+
 ```
