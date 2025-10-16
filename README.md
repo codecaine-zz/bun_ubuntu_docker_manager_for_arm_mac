@@ -4,6 +4,10 @@
 
 > Transform your macOS into a powerful Linux development environment with zero hassle!
 
+## 📍 Repository
+
+**GitHub Repository**: [https://github.com/codecaine-zz/bun_ubuntu_docker_manager_for_arm_mac.git](https://github.com/codecaine-zz/bun_ubuntu_docker_manager_for_arm_mac.git)
+
 ---
 
 ## 📋 Table of Contents
@@ -153,9 +157,14 @@ bun --version      # Bun 1.0+
 ### Installation
 
 ```bash
-# Clone and setup
-git clone <repository-url>
-cd bun_auto_linux_bsd_docker_for_mac_arm
+# Clone the repository
+git clone https://github.com/codecaine-zz/bun_ubuntu_docker_manager_for_arm_mac.git
+cd bun_ubuntu_docker_manager_for_arm_mac
+
+# Initialize Bun project (if starting fresh)
+bun init
+
+# Install dependencies
 bun install
 
 # Verify installation
